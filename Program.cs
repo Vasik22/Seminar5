@@ -60,7 +60,7 @@
 // Console.WriteLine($"Сумма нечетных чисел = {sum}");
 
 // конец
-  
+
 
 
 // Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, 
@@ -68,41 +68,26 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-int[] numbers = new int[6];
+int[] numbers = new int[10];
 
 void FillArrayRandomNumbers(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(0, 100);
-    }
-    Console.WriteLine(String.Join(" ", array));
+for (int i = 0; i < array.Length; i++)
+{
+array[i] = new Random().Next(0, 100);
+}
+Console.WriteLine(String.Join(" ", array));
 }
 
 FillArrayRandomNumbers(numbers);
-
-
-Array.Reverse(numbers);
-int []arrayreverse;
-arrayreverse = numbers;
-Console.WriteLine(string.Join(" ", arrayreverse));
-
-
- 
-     int[] mass3 = new int[3];
-     int j;
-      mass3[j] = numbers[j] * arrayreverse[j];
-            for (int j = 0; j < 3; j++)
-            {
-                mass3[j] = numbers[j] * arrayreverse[j];
-                Console.Write(mass3[j] + " ");
+int n = numbers.Length;
+for (int i = 0; i < numbers.Length / 2; i++)
+{
+    int result = numbers[i] * numbers[n - i - 1];
+    Console.Write(result + " ");
             }
-            
 
-    
-
-//Console.WriteLine(string.Join(" ", thirdArray));
-   
+//конец 
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
